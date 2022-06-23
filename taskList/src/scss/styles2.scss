@@ -1,0 +1,108 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgba(226, 214, 214, 0.897);
+}
+.logo {
+    font-family: 'Roboto';
+    font-size: 1.3rem;
+    color:rgb(4, 22, 57);
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+header {
+    height: 5rem;
+    background: rgb(47,131,143);
+    background: linear-gradient(25deg, rgba(47,131,143,1) 0%, rgba(183,223,228,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+.tasks-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    width: 90%;
+    background:rgb(209, 193, 164);
+    margin: 5rem auto;
+    border-radius: 15px;
+    overflow-x: scroll;
+    .task-table {
+        width: 30%;
+        background: rgb(177, 208, 240);
+        margin: 2rem;
+        display: block;
+        border-radius: 15px;
+        .task-header {
+            width: 100%;
+            margin: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px;
+            padding: 0.8rem;
+        }
+        .task-content{
+            display: block;
+            width: 90%;
+            background: rgb(231, 240, 204);
+            margin: 0.6rem auto;
+            border-radius: 15px;
+            padding: 0.2rem;
+            .content-header{
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 90%;
+                margin: 0.6rem auto;
+                border-radius: 15px
+            }
+            .content{
+                display: block;
+                width: 90%;
+                background: rgb(176, 199, 106);
+                margin: 0.6rem auto;
+                border-radius: 15px;
+                padding: 0.2rem;
+                .task-text-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 0.5rem;
+                }
+                .task-text-content{
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+footer {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    .rights {
+        color: white;
+    }
+}
+button {
+    border: none;
+    background: none;
+    &:hover{
+        cursor: pointer;
+    }
+  }

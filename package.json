@@ -1,0 +1,16 @@
+{
+  "name": "tasklistproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass taskList/src/scss/styles.scss:taskList/static/public/css/styles.css  --watch --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}

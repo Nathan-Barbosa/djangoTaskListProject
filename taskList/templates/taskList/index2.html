@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'public/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@100&family=Playfair+Display&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <title>Daily Tasks</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="menu">
+                <div class="logo">DailyTask</div>
+                <div class="login-button">
+                    <button><img src="static/public/assets/plus.svg" alt="plus-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="tasks-container">
+            <div class="task-table">
+                <div class="task-header">
+                    <div class="task-name">A Fazer</div>
+                    <button class="delete-button"><img src="{% static 'public/assets/x.svg' %}" alt=""></button>
+                </div>
+                <div class="task-content">
+                    <div class="content-header">
+                        <div>Lembretes</div>
+                    </div>
+                    <div class="content">
+                        <div class="task-text-header">
+                            <span>Task 1</span>
+                            <div><button><img src="{% static 'public/assets/trash-2.svg' %}" alt="delete-content-button"></button>
+                            </div>
+                        </div>
+                        <div class="task-text-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus facere, cupiditate molestiae quisquam dolorem necessitatibus. Eligendi, perferendis.</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="task-text-header">
+                            <span>Task 2</span>
+                            <div><button><img src="{% static 'public/assets/trash-2.svg' %}" alt="delete-content-button"></button>
+                            </div>
+                        </div>
+                        <div class="task-text-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus facere, cupiditate molestiae quisquam dolorem necessitatibus. Eligendi, perferendis.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task-table">
+                <div class="task-header">
+                    <div class="task-name">Concluído</div>
+                    <button class="delete-button"><img src="{% static 'public/assets/x.svg' %}" alt=""></button>
+                </div>
+                <div class="task-content">
+                    <div class="content-header">
+                        <div>Lembretes</div>
+                    </div>
+                    <div class="content">
+                        <div class="task-text-header">
+                            <span>Task 1</span>
+                            <div><button><img src="{% static 'public/assets/trash-2.svg' %}" alt="delete-content-button"></button>
+                            </div>
+                        </div>
+                        <div class="task-text-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus facere, cupiditate molestiae quisquam dolorem necessitatibus. Eligendi, perferendis.</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="task-text-header">
+                            <span>Task 2</span>
+                            <div><button><img src="{% static 'public/assets/trash-2.svg' %}" alt="delete-content-button"></button>
+                            </div>
+                        </div>
+                        <div class="task-text-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus facere, cupiditate molestiae quisquam dolorem necessitatibus. Eligendi, perferendis.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task-table">
+                <div class="task-header">
+                    <div class="task-name">Em Andamento</div>
+                    <button class="delete-button"><img src="{% static 'public/assets/x.svg' %}" alt=""></button>
+                </div>
+                <div class="task-content">
+                    <div class="content-header">
+                        <div>Lembretes</div>
+                    </div>
+                    <div class="content">
+                        <div class="task-text-header">
+                            <span>Task 1</span>
+                            <div><button><img src="{% static 'public/assets/trash-2.svg' %}" alt="delete-content-button"></button>
+                            </div>
+                        </div>
+                        <div class="task-text-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus facere, cupiditate molestiae quisquam dolorem necessitatibus. Eligendi, perferendis.</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="task-text-header">
+                            <span>Task 2</span>
+                            <div><button><img src="{% static 'public/assets/trash-2.svg' %}" alt="delete-content-button"></button>
+                            </div>
+                        </div>
+                        <div class="task-text-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus facere, cupiditate molestiae quisquam dolorem necessitatibus. Eligendi, perferendis.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="rights">Created by Nathan</div>
+    </footer>
+</body>
+</html>

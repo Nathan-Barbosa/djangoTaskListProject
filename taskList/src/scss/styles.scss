@@ -1,0 +1,136 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgba(226, 214, 214, 0.897);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+.container {
+    max-width: 998px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+header {
+    background: linear-gradient(25deg, rgba(47,131,143,1) 0%, rgba(183,223,228,1) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        font-size: 2rem;
+    }
+}
+footer {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background: black;
+   margin-top: 8rem;
+    .rights {
+        color: white;
+    }
+}
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+};
+.frame-container {
+    margin: 3rem 0;
+    display: flex;
+    gap: 2rem;
+    overflow: auto;
+    padding-bottom: 5rem;
+    .frame{
+        padding: 1rem;
+        background: #CCCC;
+        width: 290px;
+        border-radius: .4rem;
+        flex-shrink: 0;
+       
+        .frame-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            h2{
+                font-size: 1rem;
+            }
+        }
+        .task{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: lightcyan;
+            padding: 0.8rem;
+            border-radius:.25rem;
+            position: relative;
+            & + .task {
+                margin-top: 0.8rem;;
+            }
+            span{
+                font-size: 0.8rem;
+            }
+            a {
+                position: absolute;
+                right: .5rem;
+            }
+        }
+    }
+}
+.add-task{
+   border: none;
+    background: none;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 5;
+    display: none;
+    top: 0;
+    &.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-container{
+        background: rgba(241, 240, 240, 0.801);
+        width: 50%;
+        height: 50%;
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        h2{
+            margin-bottom: .5rem;
+        }
+        .submit{
+            display: block;
+            margin: .5rem auto;
+        }
+        .close-modal{
+            position: absolute;
+            right: 0.5rem;
+            top: .5rem; 
+        }
+  
+    }
+}

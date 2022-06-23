@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'public/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@100&family=Playfair+Display&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <script src="{% static 'public/js/javascript.js' %}" defer></script>
+    <title>Daily Tasks</title>
+</head>
+<body>
+    <div class="frame modal">
+        <div class="modal-container">
+            <button class="close-modal"><img src="{% static 'public/assets/x.svg'%}" alt="close-modal"></button>
+            <h2>Adicionar Novo Quadro</h2>
+            <form action="./" method="POST">
+                {% csrf_token %}
+                {{frameForm.title}}
+                <button class="submit" type="submit">Adicionar</button>
+            </form>
+        </div>        
+    </div>
+    <div class="task modal">
+        <div class="modal-container">
+            <button class="close-modal"><img src="{% static 'public/assets/x.svg'%}" alt="close-modal"></button>
+            <h2>Adicionar Nova Tarefa</h2>
+            <form action="./" method="POST">
+                {% csrf_token %}
+                {{taskForm.title}}
+                {{taskForm.frame}}
+                <button class="submit" type="submit">Adicionar</button>
+            </form>
+        </div>        
+    </div>
+    <header>
+       <div class="container">
+           <nav>
+               <a href="#"><button class="logo">DailyTask</button></a>
+                <button class="add-frame"><img src="{% static 'public/assets/plus.svg'%} " alt="add-button"></button>
+           </nav>
+       </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="frame-container">
+                    {% for frame in frames %}
+                    <div class="frame">
+                        <div class="frame-header">
+                            <h2 class="title">{{frame.title}}</h2>
+                            <a href="/delete/?id={{frame.id}}&type=frame"><img src="{% static 'public/assets/x.svg'%}" alt="delete-button"></a>
+                        </div>
+                        {%for task in tasks %}
+                        {%if task.frame_id == frame.id %}
+                        <div class="task">
+                            <span>{{task.title}}</span>
+                            <a href="/delete/?id={{task.id}}&type=task"><img src="{%static 'public/assets/trash-2.svg'%}" alt="Delete-task"></a>
+                        </div>                        
+                        {%endif%}
+                        {%endfor%}
+                        <button class="add-task" data-id="{{frame.id}}">Adicionar Tarefa</button>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="rights">Created by Nathan</div>
+    </footer>
+</body>
+</html>
